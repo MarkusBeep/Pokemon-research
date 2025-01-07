@@ -4,15 +4,15 @@
 }
 @font-face {
     font-family: poke-font;
-    src: url(/pokemon-font/Pokemon\ Solid.ttf);
+    src: url(/fonts/Pokemon\ Solid.ttf);
 }
 @font-face {
     font-family:poke-font2;
-    src: url(/pokemon-font/Pokemon\ Hollow.ttf);
+    src: url(fonts/Pokemon\ Hollow.ttf);
 }
 @font-face {
     font-family:nintendo-DS ;
-    src: url(/pokemon-font/Nintendo-DS-BIOS.ttf);
+    src: url(fonts/Nintendo-DS-BIOS.ttf);
 }
 body{
     background-color: rgb(205, 68, 68);
