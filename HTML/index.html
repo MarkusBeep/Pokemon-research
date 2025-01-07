@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poke web</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1 class="pokemon-research-title">Pókemon Research</h1>
+    <div class="Pokemons-container">
+      <div class="pokemon-search-title">
+        <h2 class="pokemon-input-title">Type your pokemon</h2>
+      </div>
+
+      <div class="pokemons-input-search">
+        <input
+          class="input-pokemon"
+          placeholder="Type any pokemon..."
+          type="search"
+          name="search-bar"
+          id="pokeBar"
+        />
+        <div class="poke-button">
+          <button class="button-search" id="searchButtn" onclick="fetchData()">
+            Search Pókemon
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="Pokemon-cards">
+      <div class="pokemon" id="pokemon">
+        <img class="pokemon-img" src="" alt="" id="pokemonSprite" />
+        <div class="name-container">
+          <h2 class="pokemon-name" id="pokeName"></h2>
+          <h3 class="pokemon-type" id="pokeType"></h3>
+          <h3 class="pokemon-type-2" id="pokeType-2"></h3>
+        </div>
+      </div>
+    </div>
+    <script src="/js/index.js" defer></script>
+  </body>
+</html>
