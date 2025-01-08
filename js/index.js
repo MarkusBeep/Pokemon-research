@@ -18,18 +18,7 @@ async function fetchData() {
        pokeName.innerHTML = name;
        pokeName.style.display = "block"
 
-  
-       const typeofpkm = data.types[0].type.name 
-       const pokeType = document.getElementById ('pokeType')
-       pokeType.innerHTML = typeofpkm
-       pokeType.style.display = "block"
-
-       const typeofpkm2 = data.types[1].type.name
-       const pokeType2 = document.getElementById ('pokeType-2')
-       pokeType2.innerHTML = typeofpkm2
-       pokeType2.style.display = "block"        
-
-
+//types of color
        const typeColors = {
         fire: "#F08030",
         water: "#6890F0",
@@ -50,16 +39,29 @@ async function fetchData() {
         ghost: "#705898",
         steel: "#B8B8D0",
     };
+    const typeofpkm = data.types[0].type.name 
+    const pokeType = document.getElementById ('pokeType')
+    pokeType.innerHTML = typeofpkm
+    pokeType.style.display = "block"
 
     // Cambiar el color de fondo según el tipo de Pokémon
    
-    const bgColor = typeColors[typeofpkm]  || "#FFFFFF"; // Color por defecto si el tipo no se encuentra
+    const bgColor = typeColors[typeofpkm]  || "#FFFFFF"; 
     document.getElementById('pokeType').style.backgroundColor = bgColor;
 
-    const bgColor2= typeColors[typeofpkm2] || "#FFFFFF";
-    document.getElementById('pokeType-2').style.backgroundColor = bgColor2;
-
-
+       
+    if (data.types[1]){
+     const typeofpkm2 = data.types[1].type.name
+     const pokeType2 = document.getElementById ('pokeType-2') 
+     pokeType2.innerHTML = typeofpkm2   
+     pokeType2.style.display = "block" 
+     const bgColor2= typeColors[typeofpkm2] || "#FFFFFF";
+     document.getElementById('pokeType-2').style.backgroundColor = bgColor2;
+      
+    }else {
+     const pokeType2 = document.getElementById('pokeType-2');
+     pokeType2.style.display = "none"; 
+    }
 
        
     }
